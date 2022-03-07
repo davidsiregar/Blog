@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../Day 3/style.css" />
+  </head>
+  <body>
+    
+    <nav>
+      <div class="left-side">
+        <a href="../Day 3/index.html"
+          ><img src="../Day 3/asset/logodu.png" alt=""
+        /></a>
+        <ul>
+          <li class="home"><a href="../Day 3/index.html">Home</a></li>
+          <li><a href="../Day 3/my-project.html">My Project</a></li>
+        </ul>
+      </div>
+
+      <div class="right-side">
+        <a href="../Day 3/contact.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <h1 style="text-align: center">GET IN TOUCH</h1>
+    <form action="input-form">
+      <div style="margin-bottom: 20px">
+        <label for="input-name" style="font-size: 25px; font-weight: 600"
+          >Name</label
+        >
+
+        <input
+          type="text"
+          id="input-name"
+          maxlength="15"
+          required
+          style="
+            width: 100%;
+            padding: 8px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+          "
+        />
+      </div>
+
+      <div style="margin-bottom: 20px">
+        <label for="input-email" style="font-size: 25px; font-weight: 600"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="input-email"
+          required
+          style="
+            width: 100%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+          "
+        />
+      </div>
+
+      <div style="margin-bottom: 20px">
+        <label for="input-number" style="font-size: 25px; font-weight: 600"
+          >Phone Number</label
+        >
+        <input
+          type="number"
+          id="input-number"
+          required
+          style="
+            width: 100%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+          "
+        />
+      </div>
+
+      <div style="margin-bottom: 20px">
+        <label for="input-subject" style="font-size: 25px; font-weight: 600"
+          >Subject</label
+        >
+        <select
+          id="input-subject"
+          required
+          style="
+            width: 104%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+          "
+        >
+          <option hidden></option>
+          <option value="Let's Talk" style="font-weight: 200">
+            Let's Talk
+          </option>
+          <option value="Let's Collaboration">Let's Collaboration</option>
+          <option value="I'm Hiring">I'm Hiring</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="input-message" style="font-size: 25px; font-weight: 600"
+          >Your Message</label
+        >
+        <textarea
+          id="input-message"
+          cols="50"
+          rows="10"
+          style="
+            width: 100%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+          "
+        ></textarea>
+      </div>
+
+      <button
+        type="button"
+        onclick="submitForm()"
+        style="
+          background-color: black;
+          padding: 10px;
+          color: white;
+          border: 1px solid;
+          border-radius: 20px;
+          text-align: center;
+          margin-left: 84%;
+          margin-top: 10px;
+          width: 20%;
+          cursor: pointer;
+        "
+      >
+        Submit
+      </button>
+    </form>
+
+
+  </body>
+</html>
