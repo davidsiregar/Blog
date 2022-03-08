@@ -5,12 +5,9 @@ function addBlog() {
   let startDate = document.getElementById("start-date").value;
   let endDate = document.getElementById("end-date").value;
   let desc = document.getElementById("desc-area").value;
-  // let checkbox = document.getElementById(
-  //   "tech1",
-  //   "tech2",
-  //   "tech3",
-  //   "tech4"
-  // ).value;
+  let checkbox = displayByImage();
+  // document.getElementById("checkbox");
+
   let image = document.getElementById("input-image").files[0];
 
   image = URL.createObjectURL(image);
@@ -21,14 +18,44 @@ function addBlog() {
     endDate: endDate,
     desc: desc,
     image: image,
-    // checkbox: checkbox,
+    checkbox: checkbox,
     author: "boys",
     postedAt: new Date(),
   };
 
   blogs.push(blog);
-
+  // displayByImage();
   renderBlog();
+}
+
+function displayByImage() {
+  let getIcon1 = document.getElementById("tech1");
+  let getIcon2 = document.getElementById("tech2");
+  let getIcon3 = document.getElementById("tech3");
+  let getIcon4 = document.getElementById("tech4");
+  let printIcon = "";
+
+  if (getIcon1.checked == true) {
+    printIcon += '<img src="asset/nodejs.png"  alt="">';
+  }
+
+  if (getIcon2.checked == true) {
+    printIcon += '<img src="asset/next.png"  alt="">';
+  }
+  else{
+    printIcon+=``;
+  }
+
+  if (getIcon3.checked == true) {
+    printIcon += '<img src="asset/react.png"  alt="">';
+  }
+
+  if (getIcon4.checked == true) {
+    printIcon += '<img src="asset/typescript.png"   alt="">';
+  }
+ 
+
+  return printIcon;
 }
 
 function renderBlog() {
@@ -41,7 +68,7 @@ function renderBlog() {
 
   <div class="blog-content">
   <div class="title">
-    <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html" target="_blank" >Mobile Apps</a></h1>
+    <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html"  target="_blank">Mobile Apps </a></h1>
     <h3>durasi: 3 bulan</h3>
   </div>
   <p>
@@ -51,13 +78,15 @@ function renderBlog() {
     provident nostrum accusamus.
   </p>
   <div class="logo-js">
-    <img src="asset/playstore.png" alt="">
-    <img src="asset/android1.jpg" alt="">
-    <img src="asset/java.png" alt="">
+    <img src="asset/nodejs.png"   alt="">
+    <img src="asset/react.png"  alt="">
+    <img src="asset/nextjs.png"  alt="">
+    <img src="asset/typescript.png"  alt="">
+
   </div>
   <div class="btn-group">
     <a href="#" class="btn-edit">Edit post</a>
-    <a href="#" class="btn-delete" onclick="deletePost()">Delete Post</a>
+    <a href="tugas.html" class="btn-delete" onclick="deletePost()">Delete Post</a>
   </div>
 </div>
 </div>`;
@@ -97,16 +126,19 @@ function renderBlog() {
 
     <div class="blog-content">
     <div class="title">
-      <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html" target="_blank" >${blogs[i].title}</a></h1>
+      <h1><a href="my-project-detail.html" target="_blank" onclick="renderBlogDetail()">${blogs[i].title}</a></h1>
       <h3>durasi: ${years} years ${month} month ${weeks} weeks ${day} day</h3>
     </div>
     <p>
     ${blogs[i].desc}
     </p>
-    <div class="logo-js">
-      <img src="asset/playstore.png" alt="">
-      <img src="asset/android1.jpg" alt="">
-      <img src="asset/java.png" alt="">
+    <div class="logo-js" >
+     ${blogs[i].checkbox}
+     ${blogs[i].checkbox}
+     ${blogs[i].checkbox}
+     ${blogs[i].checkbox}
+     
+
     </div>
     <div class="btn-group">
       <a href="#" class="btn-edit" onsubmit="editPost()">Edit post</a>
