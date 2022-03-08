@@ -38,22 +38,30 @@ function displayByImage() {
   if (getIcon1.checked == true) {
     printIcon += '<img src="asset/nodejs.png"  alt="">';
   }
+  else{
+    printIcon+="";
+  }
 
   if (getIcon2.checked == true) {
-    printIcon += '<img src="asset/next.png"  alt="">';
+    printIcon += '<img src="asset/nextjs.png"  alt="">';
   }
   else{
-    printIcon+=``;
+    printIcon+="";
   }
 
   if (getIcon3.checked == true) {
     printIcon += '<img src="asset/react.png"  alt="">';
   }
+  else{
+    printIcon+="";
+  }
 
   if (getIcon4.checked == true) {
     printIcon += '<img src="asset/typescript.png"   alt="">';
   }
- 
+  else{
+    printIcon+="";
+  }
 
   return printIcon;
 }
@@ -134,10 +142,7 @@ function renderBlog() {
     </p>
     <div class="logo-js" >
      ${blogs[i].checkbox}
-     ${blogs[i].checkbox}
-     ${blogs[i].checkbox}
-     ${blogs[i].checkbox}
-     
+
 
     </div>
     <div class="btn-group">
