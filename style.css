@@ -293,6 +293,7 @@ body .form {
 body .blog {
   background-color: white;
   margin-top: 90px;
+  margin-bottom: 90px;
 }
 
 .blog h1 {
@@ -301,10 +302,11 @@ body .blog {
 }
 
 .blog .content-list {
-  width: 100%;
+  width: 80%;
   display: flex;
-  height: 90%;
   flex-wrap: wrap;
+  margin-left: 200px;
+  margin-top: 10px;
 }
 
 .blog .blog-content h1 a {
@@ -312,11 +314,13 @@ body .blog {
   color: black;
 }
 .blog .content-list .content-list-item {
-  border: 1px solid;
-  border-radius: 3px;
+  box-shadow: 0 7px 30px 0 rgba(10, 0, 0, 0.4);
+  border-radius: 15px;
   margin-left: 45px;
   width: 30%;
   margin-top: 30px;
+  margin-bottom: 10px;
+
 }
 .blog .content-list-item p {
   width: 97%;
@@ -324,28 +328,48 @@ body .blog {
   text-align: justify;
   max-width: 100%;
 }
-.blog .content-list .content-list-item .title h1,
-h3 {
-  text-align: center;
-}
 
+.blog .content-list .content-list-item  .title h1 {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 23px;
+  margin-top: 5px;
+}
+.blog .content-list .content-list-item  .title h3{
+  text-align: left;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 300;
+}
 .blog .content-list-item .foto img {
   height: 350px;
-  width: 350px;
-  width: 100%;
+  /* width: 350px; */
+  width: 95%;
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
-
+.blog .content-list .content-list-item .blog-content p{
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  width: 85%;
+}
 .blog .content-list .content-list-item .blog-content .logo-js img {
-  width: 80px;
-  height: 80px;
-  padding: 15px;
+  width: 45px;
+  height: 45px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
 }
 .blog .title {
   font-size: 15px;
   font-weight: 200;
 }
 .blog .content-list-item .btn-group {
-  width: 100%;
+  width: 97%;
   display: flex;
 }
 
@@ -356,13 +380,15 @@ h3 {
   flex: 50%;
 }
 .blog .content-list-item .btn-group a {
-  padding: 10px;
-  background-color: navy;
+  padding: 3px;
+  background-color: black;
   border: 1px solid;
   border-radius: 10px;
   color: white;
   text-align: center;
   text-decoration: none;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 
 /* my-project-detail */

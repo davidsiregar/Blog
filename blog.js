@@ -6,7 +6,6 @@ function addBlog() {
   let endDate = document.getElementById("end-date").value;
   let desc = document.getElementById("desc-area").value;
   let checkbox = displayByImage();
-  // document.getElementById("checkbox");
 
   let image = document.getElementById("input-image").files[0];
 
@@ -24,7 +23,6 @@ function addBlog() {
   };
 
   blogs.push(blog);
-  // displayByImage();
   renderBlog();
 }
 
@@ -111,6 +109,7 @@ function renderBlog() {
       years = 0,
       weeks = 0,
       day = 0;
+
     while (days) {
       if (days >= 365) {
         years++;
@@ -153,7 +152,39 @@ function renderBlog() {
 </div>`;
   }
 }
+function days()
+{
+  for (let i = 0; i < blogs.length; i++) {
+    let startDate = new Date(blogs[i].startDate);
+    let endDate = new Date(blogs[i].endDate);
 
+    let difference = endDate - startDate;
+    let days = difference / (1000 * 60 * 60 * 24);
+    // let month = Math.round(difference / (1000 * 60 * 60 * 24 * 30));
+
+    let month = 0,
+      years = 0,
+      weeks = 0,
+      day = 0;
+    while (days) {
+      if (days >= 365) {
+        years++;
+        days -= 365;
+      } else if (days >= 30) {
+        month++;
+        days -= 30;
+      } else if (days >= 7) {
+        weeks++;
+        days -= 7;
+      } else {
+        day++;
+        days--;
+      }
+    }
+    let temp= 
+    `${years} ${month} ${weeks} ${day}`;
+    return temp;
+}
 function renderBlogDetail() {
   let blogDetailContainer = document.getElementById("project-detail");
 
@@ -216,85 +247,4 @@ function deletePost() {
   }
   renderBlog();
 }
-
-// function editPost() {
-//   let title = document.getElementById("project-name").value;
-//   let startDate = document.getElementById("start-date").value;
-//   let endDate = document.getElementById("end-date").value;
-//   let desc = document.getElementById("desc-area").value;
-//   // let checkbox = document.getElementById(
-//   //   "tech1",
-//   //   "tech2",
-//   //   "tech3",
-//   //   "tech4"
-//   // ).value;
-//   let image = document.getElementById("input-image").files[0];
-
-//   image = URL.createObjectURL(image);
-
-//   let blog = {
-//     title: title,
-//     startDate: startDate,
-//     endDate: endDate,
-//     desc: desc,
-//     image: image,
-//     // checkbox: checkbox,
-//     author: "boys",
-//     postedAt: new Date(),
-//   };
-
-//   blogs.push(blog);
-//   for (let i = 0; i < blogs.length; i++) {
-//     let startDate = new Date(blogs[i].startDate);
-//     let endDate = new Date(blogs[i].endDate);
-
-//     let difference = endDate - startDate;
-//     let days = difference / (1000 * 60 * 60 * 24);
-//     // let month = Math.round(difference / (1000 * 60 * 60 * 24 * 30));
-
-//     let month = 0,
-//       years = 0,
-//       weeks = 0,
-//       day = 0;
-//     while (days) {
-//       if (days >= 365) {
-//         years++;
-//         days -= 365;
-//       } else if (days >= 30) {
-//         month++;
-//         days -= 30;
-//       } else if (days >= 7) {
-//         weeks++;
-//         days -= 7;
-//       } else {
-//         day++;
-//         days--;
-//       }
-//     }
-
-//     blogContainer.innerHTML += `<div class="content-list-item" >
-//     <div class="foto">
-//       <img src="${blogs[i].image}" alt="samsung" />
-//     </div>
-
-//     <div class="blog-content">
-//     <div class="title">
-//       <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html" target="_blank" >${blogs[i].title}</a></h1>
-//       <h3>durasi: ${years} years ${month} month ${weeks} weeks ${day} day</h3>
-//     </div>
-//     <p>
-//     ${blogs[i].desc}
-//     </p>
-//     <div class="logo-js">
-//       <img src="asset/playstore.png" alt="">
-//       <img src="asset/android1.jpg" alt="">
-//       <img src="asset/java.png" alt="">
-//     </div>
-//     <div class="btn-group">
-//       <a href="#" class="btn-edit" onclick="editPost()">Edit post</a>
-//       <a href="#" class="btn-delete" onclick="deletePost()" >Delete Post</a>
-//     </div>
-//   </div>
-// </div>`;
-//   }
-// }
+}
