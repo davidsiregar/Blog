@@ -36,12 +36,12 @@ function renderBlog() {
 
   blogContainer.innerHTML = `<div class="content-list-item" >
   <div class="foto">
-    <img src="../Day 3/asset/samsung.webp" alt="samsung" />
+    <img src="asset/samsung.webp" alt="samsung" />
   </div>
 
   <div class="blog-content">
   <div class="title">
-    <h1 onclick="renderBlogDetail()"><a href="../Day 3/my-project-detail.html" target="_blank" >Mobile Apps</a></h1>
+    <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html" target="_blank" >Mobile Apps</a></h1>
     <h3>durasi: 3 bulan</h3>
   </div>
   <p>
@@ -51,9 +51,9 @@ function renderBlog() {
     provident nostrum accusamus.
   </p>
   <div class="logo-js">
-    <img src="../Day 3/asset/playstore.png" alt="">
-    <img src="../Day 3/asset/android1.jpg" alt="">
-    <img src="../Day 3/asset/java.png" alt="">
+    <img src="asset/playstore.png" alt="">
+    <img src="asset/android1.jpg" alt="">
+    <img src="asset/java.png" alt="">
   </div>
   <div class="btn-group">
     <a href="#" class="btn-edit">Edit post</a>
@@ -97,16 +97,16 @@ function renderBlog() {
 
     <div class="blog-content">
     <div class="title">
-      <h1 onclick="renderBlogDetail()"><a href="../Day 3/my-project-detail.html" target="_blank" >${blogs[i].title}</a></h1>
+      <h1 onclick="renderBlogDetail()"><a href="my-project-detail.html" target="_blank" >${blogs[i].title}</a></h1>
       <h3>durasi: ${years} years ${month} month ${weeks} weeks ${day} day</h3>
     </div>
     <p>
     ${blogs[i].desc}
     </p>
     <div class="logo-js">
-      <img src="../Day 3/asset/playstore.png" alt="">
-      <img src="../Day 3/asset/android1.jpg" alt="">
-      <img src="../Day 3/asset/java.png" alt="">
+      <img src="asset/playstore.png" alt="">
+      <img src="asset/android1.jpg" alt="">
+      <img src="asset/java.png" alt="">
     </div>
     <div class="btn-group">
       <a href="#" class="btn-edit" onclick="editPost()">Edit post</a>
@@ -137,11 +137,11 @@ function renderBlogDetail() {
         <div class="right">
           <h2>Duration</h2>
           <div class="duration-date">
-            <img src="../Day 3/asset/date.png" alt="">
+            <img src="asset/date.png" alt="">
             <h3>${blogs[i].startDate} - ${blogs[i].endDate}</h3>
           </div>
           <div class="month">
-            <img src="../Day 3/asset/clock.jpg" alt="">
+            <img src="asset/clock.jpg" alt="">
             <h3>${years} years ${month} month ${weeks} weeks ${day} day 1 Month</h3>
           </div>
 
@@ -149,24 +149,24 @@ function renderBlogDetail() {
           <div class="tech-post">
             <div class="left">
               <div class="tech">
-                <img src="../Day 3/asset/react.png" alt="">
+                <img src="asset/react.png" alt="">
                 <h3>React js</h3>
             </div>
 
             <div class="tech2">
-              <img src="../Day 3/asset/react.png" alt="">
+              <img src="asset/react.png" alt="">
               <h3>React js</h3>
           </div>
             </div>
 
           <div class="right">
             <div class="tech3">
-              <img src="../Day 3/asset/nextjs.png" alt="">
+              <img src="asset/nextjs.png" alt="">
               <h3>React js</h3>
           </div>
 
           <div class="tech4">
-            <img src="../Day 3/asset/typescript.png" alt="">
+            <img src="asset/typescript.png" alt="">
             <h3>React js</h3>
         </div>
 
