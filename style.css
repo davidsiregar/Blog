@@ -299,6 +299,7 @@ body .blog {
   text-align: center;
   position: sticky;
 }
+
 .blog .content-list {
   width: 100%;
   display: flex;
@@ -316,7 +317,6 @@ body .blog {
   margin-left: 45px;
   width: 30%;
   margin-top: 30px;
-  /* padding: 10px; */
 }
 .blog .content-list-item p {
   width: 97%;
